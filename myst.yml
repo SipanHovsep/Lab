@@ -1,25 +1,24 @@
 version: 1
 project:
-  title: Article Title
-  # authors:
-  #   - name: Author Name
-  copyright: '2026'
-  exclude:
-    - _build
-    - Thumbs.db
-    - .DS_Store
-    - '**.ipynb_checkpoints'
-  github: opengeos/myst-article-template
-  bibliography:
-    - references.bib
+  title: Lab Notebook
+  id: 9dd43aa9-829d-4cdd-8eb6-6c91ee764e4b
+  github: https://github.com/SipanHovsep/Lab
+  jupyter: true  
   toc:
-    - file: article.md
+    - file: README.md
+    - title: Methods for Shifting the Calibration Reference Plane
+      children:
+      - file: VNA/1_port.md
+        title: Single Port calibration
+      - file: VNA/12.md
+        title: 12 term error model
+    - title: Building NMR 
+      children:
+      - file: NMR/code.md
+        title: Python code for coil creation
 site:
+  template: book-theme
   options:
-    logo: logo.png
-    logo_dark: logo.png
-    favicon: fav.ico
-    folders: true
-    style: custom.css
-    # analytics_google: G-XXX
-  template: article-theme
+    style: _site/custom.css
+  parts:
+    primary_sidebar_footer: _site/footer.md
